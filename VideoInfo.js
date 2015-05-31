@@ -2,7 +2,7 @@
 // Allows to get the video of the url through the api_url (optional)
 function BaseVideoInfo(url, api_url) {
     this.url = url || 'null';
-    api_url = api_url || "https://youtube-dl.appspot.com";
+    api_url = api_url || "https://frozen-sierra-7279.herokuapp.com";
     this.api_url = api_url + "/api/info";
 }
 
