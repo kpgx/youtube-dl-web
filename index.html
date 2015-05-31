@@ -1,1 +1,78 @@
-My Page
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>youtube-dl web</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!--Le styles-->
+    <link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet"/>
+    
+    <script src="VideoInfo.js"></script>
+    <script src="InfoViewer.js"></script>
+    <script src="processURL.js"></script>
+    <script src="urlform.js"></script>
+
+</head>
+
+<body>	
+	<!--Fork me ribbon-->
+	<a href="https://github.com/kpgx/youtube-dl-web">
+		<img style="position: fixed; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub">
+	</a>
+	<div class="container">		
+		
+		<form class="form" name="URLform" id="URLform">
+		        <h2 class="form-signin-heading">Enter the URL</h2>
+		        <div class="input-prepend input-append">
+		        	<div class="btn-group">
+		                <button class="btn dropdown-toggle" data-toggle="dropdown">Examples <span class="caret"></span></button>
+		                <ul class="dropdown-menu">
+					<li><a href="javascript: setURL(this.form,'https://www.youtube.com/watch?v=36lSzUMBJnc')">Youtube</a></li>
+		                	<li><a href="javascript: setURL(this.form,'http://vimeo.com/21604065')">Vimeo</a></li>
+		                	<li><a href="javascript: setURL(this.form,'http://www.ted.com/talks/dan_dennett_on_our_consciousness.html')">TED Talks</a></li>
+		                </ul>
+		              </div>
+		        
+			        <input  class="span6" type="text" name="url" class="input-block-level" placeholder="Webpage URL"/>
+			        
+		        	<button class="btn  btn-primary" type="button" onClick="processURLform(this.form)">Get videos</button>
+		        </div>
+			</form>
+		
+		<div id="main-part">
+			
+			<div id="videos-section">
+				<!-- Will be used when videos are processed -->
+			</div>
+		</div>
+		
+		<hr></hr>
+		<div class="powered-by-youtube-dl">
+			<p><a href="https://yt-dl.org/">Powered by youtube-dl</a></p>
+		</div>
+			
+		<div id="FOOTER">
+		<hr/>
+		<footer>
+			<p>Fork of &copy; <a href=https://github.com/jaimeMF/youtube-dl-web">jaimeMF's youtube-dl-web</a></p>
+			<p>Uses my own server</p>
+			<p>Uses <a href="http://twitter.github.com/bootstrap">Bootstrap</a>.</p>
+		</footer>
+		</div>
+		
+	</div> <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+
+  </body>
+
+</html>
